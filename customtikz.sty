@@ -1,0 +1,51 @@
+\usepackage{tikz} 
+\usetikzlibrary{shapes, shapes.multipart, arrows, positioning, shapes.geometric, calc}
+
+
+\tikzset{
+    enc/.style={
+        trapezium,
+        trapezium angle=70,
+        trapezium stretches body,
+        fill=blue!20,
+        text width=1.0cm,
+        align=center,
+        minimum height=2cm,
+        draw=blue,
+        line width=1.5pt,
+        rotate=-90,
+    },
+    dec/.style={
+        trapezium,
+        trapezium angle=70,
+        trapezium stretches body,
+        fill=red!20,
+        text width=1.0cm,
+        align=center,
+        minimum height=2cm,
+        draw=red,
+        line width=1.5pt,
+        rotate=90,
+    },
+    prior/.style={
+        trapezium,
+        trapezium angle=70,
+        trapezium stretches body,
+        fill=green!20,
+        text width=2.8cm,
+        align=center,
+        draw=green,
+        line width=1.5pt,    
+    },    
+    vbox shape/.style={
+        rectangle,
+        rectangle split,
+        rectangle split parts=#1,
+        draw=green, 
+        thick, 
+    },
+    line/.style={draw, thick, ->},
+    dash1/.style={
+        dash pattern=on 2pt off 1pt,
+    }
+}

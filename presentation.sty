@@ -8,6 +8,7 @@
 \usepackage[italic,eulergreek,symbolmisc]{mathastext}
 \usepackage{url}
 
+
 % Microtypography
 \usepackage{microtype}
 \DisableLigatures[f]{encoding = *, family = * }
@@ -16,16 +17,37 @@
 \MTsetmathskips{y}{1mu}{0mu}
 \MTsetmathskips{j}{1.5mu}{0mu}
 
+% --- Operators ---
+\DeclareMathOperator*{\argmin}{arg\,min}
+
+
+% --- Theorem environments ---
+\newtheorem{defn}{Def.}[section]
+
+\newtheoremstyle{spacedstyle} % name of the style
+  {3pt} % Space above
+  {3pt} % Space below
+  {\setstretch{1.7}\selectfont} % Body font
+  {} % Indent amount
+  {\bfseries} % Theorem head font
+  {.} % Punctuation after theorem head
+  {.5em} % Space after theorem head
+  {} % Theorem head spec (can be left empty, meaning 'normal')
+
+\theoremstyle{spacedstyle}
+\newtheorem{spacedProof}{Proof}[section]
+
+
 % --- Beamer theme ---
 
-\usetheme{Boadilla}
+\usetheme{Goettingen}
 \usecolortheme[]{seagull}
 \setbeamercovered{transparent}
 \setbeamertemplate{navigation symbols}{}
 
 % --- Font sizes and shapes ---
 
-\setbeamerfont{title}{size=\huge, series=\scshape}
+\setbeamerfont{title}{size=\Large, series=\scshape}
 \setbeamerfont{author}{size=\large}
 \setbeamerfont{frametitle}{series=\scshape}
 \setbeamertemplate{frametitle}{\MakeLowercase{\insertframetitle}}
@@ -60,21 +82,21 @@
 \setbeamertemplate{footline}{}
 
 % Uncomment the line below to insert slide numbers
-% \setbeamertemplate{footline}[frame number]
+\setbeamertemplate{footline}[frame number]
 
 % --- Title slide ---
 
 % % Title capitalization and underline
 \let\oldtitle\title
-\renewcommand{\title}[1]{\oldtitle[]{\MakeLowercase{#1}\vspace{-5mm}\\\color{myblack}{\rule{\textwidth}{2pt}}\vspace{1cm}}}
+\renewcommand{\title}[1]{\oldtitle[]{\MakeLowercase{#1}\vspace{-0.5mm}\\\color{myblack}{\rule{\textwidth}{2pt}}\vspace{0.5cm}}}
 
 % Paper information
 \usepackage{xparse}
-\NewDocumentCommand{\information}{o g g}{%
+\NewDocumentCommand{\information}{O{} g g}{%
 \author[]{#2%
 \IfValueT{#3}{\vspace{5mm}\\#3}%
-\IfValueT{#1}{\vspace{5mm}\\\color{mygray}{\footnotesize Available at \url{#1}}}%
-}\date[]{}}
+\IfValueT{#1}{\vspace{5mm}\\\color{mygray}{\footnotesize \href{#1}{Reference Link}}}%
+}\date{}}
 
 % --- Lists ---
 
