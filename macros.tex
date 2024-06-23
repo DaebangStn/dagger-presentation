@@ -1,0 +1,33 @@
+\usepackage{amsmath}
+\usepackage[ruled,vlined]{algorithm2e} % For algorithm2e environment
+
+\newcommand{\bs}[1]{\boldsymbol{#1}} % For bold symbols
+\newcommand{\encoder}{\mathcal{E}} % Encoder
+\newcommand{\decoder}{\mathcal{D}} % Decoder
+\newcommand{\prior}{\mathcal{P}} % Prior
+\newcommand{\motiondata}{\mathcal{M}} % Motion data
+\newcommand{\policyphcplus}{\pi_{\mathrm{PHC+}}} % Policy PHC+
+\newcommand{\latentt}{z_t} % Latent variable
+\newcommand{\actiond}{a_t} % Action
+\newcommand{\refps}{\mathrm{ref}_s} % Reference state
+\newcommand{\selfstate}{s_{\mathrm{self}}} % Self state
+\newcommand{\goalstateimitate}{g_t} % Goal state
+\newcommand{\phcplusaction}{a_{\mathrm{PHC+}}} % PHC+ action
+
+\newcommand{\priormu}{\bs{\mu}^{p}_t}
+\newcommand{\priorsigma}{\bs{\sigma}^{p}_t}
+\newcommand{\encodermu}{\bs{\mu}^{e}_t}
+\newcommand{\encodermup}{\bs{\mu}^{e}_{t-1}}
+\newcommand{\encodersigma}{\bs{\sigma}^{e}_t}
+\newcommand{\actionmu}{\bs{\mu}^{a}_t}
+\newcommand{\actionsigma}{\bs{\mu}^{a}_t}
+\newcommand{\kld}{D_{\text{KL}}}
+
+\newcommand{\name}{\text{PULSE}}
+\newcommand{\policyphc}{{\pi_{\text{PHC}}}}
+\newcommand{\policyphcplus}{{\pi_{\text{PHC+}}}}
+\newcommand{\policyours}{{\pi_{\text{PULSE}}}}
+\newcommand{\policytask}{{\pi_{\text{task}}}}
+\newcommand{\rewardfunc}{\bs{\mathcal{R}}}
+\newcommand{\rewardfuncimitation}{\rewardfunc^{\text{imitation}}}
+\newcommand{\rewardfuncfailrec}{\rewardfunc^{\text{recover}}}

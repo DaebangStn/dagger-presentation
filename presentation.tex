@@ -570,7 +570,7 @@ Supervised Learning을 잘 하기 위한 방법 \\
 
 \begin{frame}
     \frametitle{Expert를 가지고 있을 때에는?}
-    Distillation이라는 용어를 사용한 작업들
+    Distillation을 사용한 작업들
 
     \begin{table}
         \centering
@@ -581,7 +581,7 @@ Supervised Learning을 잘 하기 위한 방법 \\
             \hline
             \textbf{Catch\&Carry} & Policy input: \: marker $\to$ Image \\
             \hline
-            \textbf{Progressive} & Adapt Terrain \\
+            \textbf{Progressive RL} & Adapt Terrain \\
             \hline
             \textbf{NCP} & Posterior(future frame) $\to$ Prior(no future) \\
             \hline
@@ -595,6 +595,18 @@ Supervised Learning을 잘 하기 위한 방법 \\
         \includegraphics[width=0.8\textwidth]{figs/progressive.png}
         \caption{Progressive RL 학습 Curriculum {\footnotesize (D: distillation, L: learning)}}
     \end{figure}    
+\end{frame}
+
+\begin{frame}
+    \frametitle{Case Study: PULSE}
+\begin{figure}
+    \includegraphics[width=\textwidth]{figs/pulse_alg.png}
+\end{figure}
+
+Pulse를 비롯한 다른 응용들은 DAgger과 다르게 \\ 
+$\pi^*$을 사용하지 않고 $\hat{\pi}$에서만 \\
+Trajectory를 생성 (Why?)
+
 \end{frame}
 
 \begin{frame}
@@ -676,9 +688,13 @@ Distill하지 않고, na$\ddot{i}$ve하게 학습한 결과
 
 (논문 주장) Latent와 Recon이 동시에 학습이 잘 안됨 \\
 $\Rightarrow$ 나의 연구에도 시사하는 바가 있음, \\
-Knowledge를 잘 전달하기 위해서는 어떻게 해야할까?
 
 \end{frame}    
+
+\begin{frame}
+\frametitle{}
+\end{frame}
+    
 
 \begin{frame}
     \heading{Thank you}
